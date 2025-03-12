@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+<a href="{% url 'payment' %}">Make Payment</a>
+{% comment %} <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Pay</button>
+
+</form> {% endcomment %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Bill No</th>
+        <th scope="col">Total Amount</th>
+        <th scope="col">Amount paid</th>
+        <th scope="col">Balance amount</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for bill in bills %}
+        <tr>
+        
+            <th scope="row">{{bill.date}}</th>
+            <td>{{bill.bill_number}}</td>
+            <td>{{bill.total_amount}}</td>
+            <td>{{bill.amount_paid}}</td>
+            <td>{{bill.balance_amount}}</td>
+          </tr>
+    {% endfor %}
+
+
+     
+      
+    </tbody>
+  </table>
+  <h3>Payments done by the customer</h3>
+  <ul>
+    {% for payment in payments  %}
+    <li>{{payment.amount}}</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
+    
