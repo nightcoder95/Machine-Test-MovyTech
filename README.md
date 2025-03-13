@@ -27,13 +27,17 @@ This project is a Django-based application developed as part of a machine test f
    ```bash
    pip install -r requirements.txt
    ```
+4. **Create a SuperUser**
+   ```bash
+   python manage.py createsuperuser
+   ```
 
-4. **Run the Development Server**
+5. **Run the Development Server**
    ```bash
    python manage.py runserver
    ```
 
-5. **Access the Application**
+6. **Access the Application**
    - Open your browser and go to: `http://127.0.0.1:8000/bills`
    - Admin panel: `http://127.0.0.1:8000/admin/`
     ``` 
