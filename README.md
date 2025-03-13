@@ -40,8 +40,4 @@ This project is a Django-based application developed as part of a machine test f
 6. **Access the Application**
    - Open your browser and go to: `http://127.0.0.1:8000/bills`
    - Admin panel: `http://127.0.0.1:8000/admin/`
-    ``` 
-        username - mt
-        password - 123456
-     ```
 
